@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{% static 'birthday/styles.css' %}" />
+    <title>Birthday checker</title>
+  </head>
+
+  <body>
+    <div id="todayDate">
+      <h1>Dnes je <span class="colored-text">{{currentDate}}</span></h1>
+    </div>
+    <div id="myBirthday">
+      {% if birthdayDate %}
+      <h2>A mám narozeniny</h2>
+      {% else %}
+      <h2>A nemám narozeniny</h2>
+      {% endif %}
+    </div>
+  </body>
+</html>
